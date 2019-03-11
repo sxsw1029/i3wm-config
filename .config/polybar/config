@@ -61,7 +61,7 @@ font-4 = "material icons:pixelsize=16;3"
 
 modules-left = i3 xwindow
 modules-center = mpd
-modules-right = alsa cpu memory date powermenu
+modules-right = alsa cpu memory date
 
 tray-position = right
 tray-padding = 2
