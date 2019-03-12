@@ -10,7 +10,7 @@
   </tr>
   <tr>
     <th>polybar</th>
-    <th>状态栏 (需要 mpd、alsa模块)</th>
+    <th>状态栏 (需要 mpd、alsa 模块)</th>
   </tr>
   <tr>
     <th>xfce4-terminal</th>
