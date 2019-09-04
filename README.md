@@ -29,10 +29,6 @@
     <th>程序启动器</th>
   </tr>
   <tr>
-    <th>nautilus</th>
-    <th>资源管理器</th>
-  </tr>
-  <tr>
     <th>i3lock-fancy-git</th>
     <th>锁屏</th>
   </tr>

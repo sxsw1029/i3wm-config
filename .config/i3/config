@@ -48,9 +48,6 @@ bindsym $mod+F3 exec amixer set Master 5%+
 # i3lock
 bindsym $mod+F12 exec i3lock-fancy
 
-# nautilus
-bindsym $mod+c exec nautilus
-
 # rofi
 bindsym $mod+d exec rofi -show run
 
