@@ -192,7 +192,7 @@ bindsym $mod+r mode "resize"
 default_border none
 
 # i3-gaps
-gaps inner 10
+gaps inner 5
 gaps outer 5
 
 # feh background
@@ -200,4 +200,3 @@ exec_always --no-startup-id feh --bg-scale $HOME/Pictures/bg.jpg
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
