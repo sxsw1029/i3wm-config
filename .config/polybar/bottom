@@ -1,0 +1,138 @@
+; vim:ft=dosini
+[module/cpu]
+type = internal/cpu
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+format = <ramp-load> <label>
+label =  %percentage:2%%
+
+; Spacing between individual per-core ramps
+ramp-load-spacing = 1
+ramp-load-0 = 
+ramp-load-0-foreground = ${colors.gray}
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+format = <ramp-used> <label>
+
+label = %gb_used% / %gb_total%
+
+ramp-used-0 = 
+ramp-used-0-foreground = ${colors.gray}
+
+[module/temperature]
+type = internal/temperature
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+; Thermal zone to use
+; To list all the zone types, run 
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Base temperature for where to start the ramp (in degrees celsius)
+; Default: 0
+base-temperature = 20
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 60
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.alert}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+[module/filesystem]
+type = internal/fs
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Mountpoints to display
+mount-0 = /
+mount-1 = /home
+
+format-mounted = <label-mounted>
+format-unmounted = <label-unmounted>
+
+label-mounted = %{F#666666}%mountpoint%%{F-}: %used% / %total%
+label-unmounted = %mountpoint%: not mounted
+label-unmounted-foreground = ${colors.gray}
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <icon-repeat> <icon-random> <label-time> <label-song>
+
+label-offline =  mpd is offline
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+icon-repeat = 
+icon-single =
+icon-random = 
+
+toggle-on-foreground = ${colors.white}
+toggle-off-foreground = ${colors.gray}
+
+[module/wired]
+type = internal/network
+interface = ens33
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected =  %local_ip%  %upspeed%  %downspeed%
+
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% not connected
+label-disconnected-foreground = ${colors.gray}
+
+[module/wireless]
+type = internal/network
+interface = wlan1
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%  %upspeed%  %downspeed%
+
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% not connected
+label-disconnected-foreground = ${colors.gray}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
