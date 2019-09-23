@@ -10,7 +10,7 @@
   </tr>
   <tr>
     <th>polybar</th>
-    <th>状态栏 (需要 mpd、alsa 模块)</th>
+    <th>状态栏</th>
   </tr>
   <tr>
     <th>xfce4-terminal</th>
@@ -18,7 +18,7 @@
   </tr>
   <tr>
     <th>compton</th>
-    <th>透明</th>
+    <th>透明工具</th>
   </tr>
   <tr>
     <th>feh</th>
@@ -45,7 +45,7 @@ exec compton -b &
 exec i3 -V >> ~/.config/i3/log/i3log-$(date +'%F-%k-%M-%S') 2>&1
 ```
 
-compton.conf (解决 polybar 透明阴影问题)
+compton.conf (取消 polybar 阴影)
 ```
 wintypes: {
   dock = {
