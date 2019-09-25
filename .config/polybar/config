@@ -5,19 +5,21 @@ include-file = $HOME/.config/polybar/bottom
 
 [colors]
 black = #000000
-black-alpha = #99000000
+black-alpha = #a6000000
 white = #ffffff
-white-alpha = #99ffffff
-gray = #666666
-gray-alpha = #80666666
+white-alpha = #a6ffffff
+gray1 = #888888
+gray1-alpha = #99888888
+gray2 = #555555
+gray2-alpha = #a6555555
 primary = #1e90ff
-primary-alpha = #991e90ff
+primary-alpha = #a61e90ff
 success = #2ed573
-success-alpha = #992ed573
+success-alpha = #a62ed573
 warning = #ffa502
-warning-alpha = #99ffa502
+warning-alpha = #a6ffa502
 alert = #ff4757
-alert-alpha = #99ff4757
+alert-alpha = #a6ff4757
 
 [bar/top]
 monitor =
@@ -58,7 +60,7 @@ modules-right = xkeyboard alsa battery date xbacklight
 
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.gray-alpha}
+tray-background = ${colors.gray2-alpha}
 
 cursor-click = pointer
 cursor-scroll = ns-resize

@@ -53,7 +53,7 @@ label-mode-padding = 2
 label-mode-background = ${colors.alert-alpha}
 
 label-focused = %index% %icon%
-label-focused-background = ${colors.gray-alpha}
+label-focused-background = ${colors.gray2-alpha}
 label-focused-padding = 2
 
 label-unfocused = %index% %icon%
@@ -95,11 +95,12 @@ master-mixer = Master
 format-volume = <ramp-volume> <label-volume>
 
 label-muted =  muted
-label-muted-foreground = ${colors.gray}
+label-muted-foreground = ${colors.gray1}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+ramp-volume-foreground = ${colors.gray1}
 
 [module/battery]
 type = internal/battery
@@ -119,6 +120,7 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
+animation-charging-foreground = ${colors.gray1}
 
 format-discharging = <ramp-capacity> <label-discharging>
 ramp-capacity-0 = 
@@ -126,8 +128,10 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.gray1}
 
 label-full = 
+label-full-foreground = ${colors.gray1}
 
 [module/date]
 type = internal/date
@@ -140,12 +144,12 @@ time = %H:%M
 
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
-;date-alt = %A, %d %B %Y
-;time-alt = %H:%M:%S
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
 
 format = <label>
 
-label =  %date% %time%
+label = %{F#888}%{F-} %date% %time%
 
 [module/xwindow]
 type = internal/xwindow
@@ -162,6 +166,7 @@ enable-scroll = true
 format = <ramp> <label>
 label = %percentage%%
 ramp-0 = 
+ramp-0-foreground = ${colors.gray1}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -173,4 +178,4 @@ blacklist-1 = scroll lock
 format = <label-indicator>
 format-spacing = 0
 
-label-indicator-on-capslock =  CL
+label-indicator-on-capslock = %{F#888}%{F-} CL

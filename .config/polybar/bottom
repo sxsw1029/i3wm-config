@@ -12,7 +12,7 @@ label =  %percentage:2%%
 ; Spacing between individual per-core ramps
 ramp-load-spacing = 1
 ramp-load-0 = 
-ramp-load-0-foreground = ${colors.gray}
+ramp-load-0-foreground = ${colors.gray1}
 
 [module/memory]
 type = internal/memory
@@ -26,7 +26,7 @@ format = <ramp-used> <label>
 label = %gb_used% / %gb_total%
 
 ramp-used-0 = 
-ramp-used-0-foreground = ${colors.gray}
+ramp-used-0-foreground = ${colors.gray1}
 
 [module/temperature]
 type = internal/temperature
@@ -57,8 +57,11 @@ label-warn = %temperature-c%
 label-warn-foreground = ${colors.alert}
 
 ramp-0 = 
+ramp-0-foreground = ${colors.gray1}
 ramp-1 = 
+ramp-1-foreground = ${colors.gray1}
 ramp-2 = 
+ramp-2-foreground = ${colors.gray1}
 
 [module/filesystem]
 type = internal/fs
@@ -74,9 +77,9 @@ mount-1 = /home
 format-mounted = <label-mounted>
 format-unmounted = <label-unmounted>
 
-label-mounted = %{F#666666}%mountpoint%%{F-}: %used% / %total%
+label-mounted = %{F#888}%mountpoint%%{F-}: %used% / %total%
 label-unmounted = %mountpoint%: not mounted
-label-unmounted-foreground = ${colors.gray}
+label-unmounted-foreground = ${colors.gray1}
 
 [module/mpd]
 type = internal/mpd
@@ -98,7 +101,7 @@ icon-single =
 icon-random = 
 
 toggle-on-foreground = ${colors.white}
-toggle-off-foreground = ${colors.gray}
+toggle-off-foreground = ${colors.gray1}
 
 [module/wired]
 type = internal/network
@@ -109,11 +112,11 @@ interface = ens33
 interval = 3.0
 
 format-connected = <label-connected>
-label-connected =  %local_ip%  %upspeed%  %downspeed%
+label-connected = %{F#888}%{F-} %local_ip% %{F#888}%{F-} %upspeed% %{F#888}%{F-} %downspeed%
 
 format-disconnected = <label-disconnected>
 label-disconnected = %ifname% not connected
-label-disconnected-foreground = ${colors.gray}
+label-disconnected-foreground = ${colors.gray1}
 
 [module/wireless]
 type = internal/network
@@ -124,11 +127,11 @@ interface = wlan1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%  %upspeed%  %downspeed%
+label-connected = %essid% %{F#888}%{F-} %upspeed% %{F#888}%{F-} %downspeed%
 
 format-disconnected = <label-disconnected>
 label-disconnected = %ifname% not connected
-label-disconnected-foreground = ${colors.gray}
+label-disconnected-foreground = ${colors.gray1}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -136,3 +139,4 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-5 = 
+ramp-signal-foreground = ${colors.gray1}
