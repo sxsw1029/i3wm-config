@@ -1,3 +1,5 @@
+# Moved to https://github.com/sxsw1029/dotfiles
+
 ## My i3wm config
 
 ![preview](preview.png)
